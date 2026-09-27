@@ -1,4 +1,3 @@
-import { DIAGRAM_CANVAS_DARK, DIAGRAM_CANVAS_LIGHT } from "./diagram-canvas";
 import type { ArchitectureResourceIcon, DiagramEdgeKind, DiagramNodeShape } from "./diagram";
 import {
   ARCHITECTURE_RESOURCE_ICON_ELEMENTS,
@@ -102,7 +101,7 @@ export type ArchitectureSurface = {
 
 export const ARCHITECTURE_SURFACES: Record<ArchitectureAppearance, ArchitectureSurface> = {
   light: {
-    canvas: DIAGRAM_CANVAS_LIGHT,
+    canvas: "#F5F8F6",
     boundaryStroke: "#7B8F86",
     boundaryText: "#1C3D31",
     boundaryFill: "rgba(123, 143, 134, 0.05)",
@@ -126,7 +125,7 @@ export const ARCHITECTURE_SURFACES: Record<ArchitectureAppearance, ArchitectureS
     },
   },
   dark: {
-    canvas: DIAGRAM_CANVAS_DARK,
+    canvas: "#101311",
     boundaryStroke: "#5B6F66",
     boundaryText: "#D7F4E8",
     boundaryFill: "rgba(91, 111, 102, 0.12)",

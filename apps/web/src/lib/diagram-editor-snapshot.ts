@@ -1,15 +1,13 @@
-import { DIAGRAM_DEFAULT_THEME, type DiagramDocument } from "@edgeever/shared";
+import type { DiagramDocument } from "@edgeever/shared";
 
 // Ordinary node dimensions are computed by the renderer, including font metrics.
 // Only boundaries have authored dimensions. Display changes must not create edits.
-// Mind maps and flowcharts materialize the plain default. Architecture keeps the
-// previous materialized theme so opening one does not write a color scheme.
 export const diagramEditorSnapshot = (title: string, document: DiagramDocument) => JSON.stringify({
   title,
   document: {
     schemaVersion: document.schemaVersion,
     kind: document.kind,
-    theme: document.theme ?? (document.kind === "architecture" ? "brand" : DIAGRAM_DEFAULT_THEME),
+    theme: document.theme ?? "brand",
     structure: document.kind === "mind-map" ? document.structure ?? "map" : undefined,
     nodes: document.nodes.map((node) => ({
       id: node.id, label: node.label, x: node.x, y: node.y, shape: node.shape,

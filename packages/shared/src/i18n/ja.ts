@@ -540,7 +540,6 @@ export const ja = {
     theme: "配色",
     themeGroupVivid: "鮮やか",
     themeGroupClassic: "落ち着き",
-    themePlain: "素",
     themeBrand: "森",
     themeCosmos: "星空",
     themeDune: "砂丘",
